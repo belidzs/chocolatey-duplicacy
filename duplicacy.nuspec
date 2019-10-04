@@ -3,22 +3,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>duplicacy</id>
-    <!-- version should MATCH as closely as possible with the underlying software -->
-    <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
-    <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
     <version>2.2.3</version>
     <packageSourceUrl>https://github.com/belidzs/chocolatey-duplicacy</packageSourceUrl>
     <owners>belidzs</owners>
     <title>duplicacy</title>
     <authors>Acrosync LLC</authors>
     <projectUrl>https://github.com/gilbertchen/duplicacy/</projectUrl>
-    <iconUrl>https://github.com/belidzs/chocolatey-duplicacy/blob/master/images/duplicacy.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/belidzs/chocolatey-duplicacy/master/images/duplicacy.png</iconUrl>
     <copyright>2017 Acrosync LLC</copyright>
     <licenseUrl>https://github.com/gilbertchen/duplicacy/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/gilbertchen/duplicacy/</projectSourceUrl>
     <docsUrl>https://forum.duplicacy.com/t/duplicacy-quick-start-cli/1101</docsUrl>
-    <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://github.com/gilbertchen/duplicacy/issues</bugTrackerUrl>
     <tags>duplicacy backup</tags>
     <summary>Duplicacy is a new generation cross-platform cloud backup tool based on the idea of Lock-Free Deduplication.</summary>
