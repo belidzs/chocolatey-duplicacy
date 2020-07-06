@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>duplicacy</id>
-    <version>2.5.2</version>
+    <version>2.6.0</version>
     <packageSourceUrl>https://github.com/belidzs/chocolatey-duplicacy</packageSourceUrl>
     <owners>belidzs</owners>
     <title>duplicacy</title>
@@ -17,8 +17,10 @@
     <docsUrl>https://forum.duplicacy.com/t/duplicacy-quick-start-cli/1101</docsUrl>
     <bugTrackerUrl>https://github.com/gilbertchen/duplicacy/issues</bugTrackerUrl>
     <tags>duplicacy backup</tags>
-    <summary>Duplicacy is a new generation cross-platform cloud backup tool based on the idea of Lock-Free Deduplication.</summary>
-    <description>This repository hosts source code, design documents, and binary releases of the command line version of Duplicacy.  There is also a Duplicacy GUI frontend built for Windows and Mac OS X available from https://duplicacy.com.
+    <summary>Duplicacy: A lock-free deduplication cloud backup tool</summary>
+    <description>Duplicacy is a new generation cross-platform cloud backup tool based on the idea of [Lock-Free Deduplication](https://github.com/gilbertchen/duplicacy/wiki/Lock-Free-Deduplication).  
+
+This repository hosts source code, design documents, and binary releases of the command line version of Duplicacy.  There is also a Duplicacy GUI frontend built for Windows and Mac OS X available from https://duplicacy.com.
 
 There is a special edition of Duplicacy developed for VMware vSphere (ESXi) named [Vertical Backup](https://www.verticalbackup.com) that can back up virtual machine files on ESXi to local drives, network or cloud storages.
 
@@ -69,7 +71,8 @@ For reference, the following chart shows the running times (in seconds) of backi
 [![Comparison of Cloud Storages](https://github.com/gilbertchen/duplicacy/blob/master/images/duplicacy_benchmark_cloud.png "Comparison of Cloud Storages")](https://github.com/gilbertchen/cloud-storage-comparison)
 
 
-For complete benchmark results please visit https://github.com/gilbertchen/cloud-storage-comparison.</description>
+For complete benchmark results please visit https://github.com/gilbertchen/cloud-storage-comparison.
+</description>
     <releaseNotes>https://github.com/gilbertchen/duplicacy/releases</releaseNotes>
   </metadata>
   <files>
