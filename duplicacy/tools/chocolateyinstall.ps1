@@ -8,4 +8,4 @@ $checksumType  = 'sha256'
 $checksum64    = '93893dcf86924426ecb3401d1983a839929aa482289992d8858b1ec60316f46b'
 $checksumType64= 'sha256'
 
-Get-ChocolateyWebFile -PackageName $packageName -FileFullPath $toolsDir\'duplicacy.exe' -Url $url -Url64bit $url64 -Checksum $checksum -ChecksumType $checksumType -Checksum64 $checksum64 -ChecksumType64 $checksumType64
+Get-ChocolateyWebFile -PackageName $env:ChocolateyPackageName -FileFullPath $toolsDir\'duplicacy.exe' -Url $url -Url64bit $url64 -Checksum $checksum -ChecksumType $checksumType -Checksum64 $checksum64 -ChecksumType64 $checksumType64

@@ -1,0 +1,40 @@
+name: Auto Update Package
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Daily at midnight UTC
+  workflow_dispatch:   # Manual trigger
+
+jobs:
+  auto_update:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      # Without a key the AU action only warns and skips the push, but still commits the
+      # version bump. Later runs would then find nothing to do and the release would
+      # never reach Chocolatey, so stop here instead.
+      - name: Check for Chocolatey API key
+        env:
+          CHOCO_API_KEY: ${{ secrets.CHOCO_API_KEY }}
+        run: |
+          if (-not $env:CHOCO_API_KEY) {
+            Write-Output '::error::The CHOCO_API_KEY repository secret is not set.'
+            exit 1
+          }
+
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Run Chocolatey-AU Action
+        uses: chocolatey-community/chocolatey-au-action@3.0
+        with:
+          package-paths: duplicacy
+          push: true
+          api-key: ${{ secrets.CHOCO_API_KEY }}
+          commit-changes: true
+          commit-message: 'chore: automatic package update [skip ci]'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
